@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  position: relative;
 }
 
 .description {
@@ -41,7 +42,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(3, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
 }
@@ -77,7 +78,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
 }
 
 .center::before {
@@ -86,6 +86,28 @@
   width: 480px;
   height: 360px;
   margin-left: -400px;
+}
+
+.title {
+	font-size: 100px;
+	background: -webkit-linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(227,227,227,1) 66%, rgba(204,204,204,1) 87%, rgba(187,187,187,1) 95%, rgba(167,167,167,1) 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcomeText {
+	display: flex;
+	flex-direction: column;
+  	width: var(--max-width);
+  	max-width: 100%;
+}
+
+.subtitle {
+	font-weight: 200;
+	line-height: 1.6;
+	color: #a8a2a2;
+	margin: 20px 0px 40px;
+	font-size: 18px;
 }
 
 .center::after {
@@ -258,9 +280,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
 
   .logo,
   .thirteen img {
